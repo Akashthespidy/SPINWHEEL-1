@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin Wheel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="left-section">
+        <div class="header">
+            <h1>WINNER</h1>
+            <h5 id="winner">NONE</h5>
+            <p>Spin time: <span id="spinTimeShow">4</span> </p>
+        </div>
+        <div class="wheel-container">
+            <canvas id="canvas" width="500" height="500"></canvas>
+            <div class="center-circle" onclick="spin()">
+                <div class="triangle"></div>
+            </div>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="inputArea">
+            <input type="text" id="nameInput" placeholder="Enter name">
+            <button onclick="addName()">Add Name</button>
+        </div>
+        <div class="spin-time">
+            <input type="number" id="spinTimeInput" placeholder="Enter spin time (seconds)">
+            <button onclick="setSpinTime()">Set Spin Time</button>
+            <button onclick="spin()">Spin</button>
+        </div>
+        <div class="name-list">
+            <ul id="nameList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
